@@ -4,7 +4,7 @@ A comprehensive collection of specialized AI subagents for [Claude Code](https:/
 
 ## Overview
 
-This repository contains 28 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed.
+This repository contains 37 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed.
 
 ## Available Subagents
 
@@ -18,13 +18,20 @@ This repository contains 28 specialized subagents that extend Claude Code's capa
 ### Language Specialists
 - **[python-pro](python-pro.md)** - Write idiomatic Python code with advanced features and optimizations
 - **[golang-pro](golang-pro.md)** - Write idiomatic Go code with goroutines, channels, and interfaces
+- **[rust-pro](rust-pro.md)** - Write idiomatic Rust with ownership patterns, lifetimes, and trait implementations
+- **[c-pro](c-pro.md)** - Write efficient C code with proper memory management and system calls
+- **[javascript-pro](javascript-pro.md)** - Master modern JavaScript with ES6+, async patterns, and Node.js APIs
+- **[sql-pro](sql-pro.md)** - Write complex SQL queries, optimize execution plans, and design normalized schemas
 
 ### Infrastructure & Operations
 - **[devops-troubleshooter](devops-troubleshooter.md)** - Debug production issues, analyze logs, and fix deployment failures
 - **[deployment-engineer](deployment-engineer.md)** - Configure CI/CD pipelines, Docker containers, and cloud deployments
 - **[cloud-architect](cloud-architect.md)** - Design AWS/Azure/GCP infrastructure and optimize cloud costs
 - **[database-optimizer](database-optimizer.md)** - Optimize SQL queries, design efficient indexes, and handle database migrations
+- **[database-admin](database-admin.md)** - Manage database operations, backups, replication, and monitoring
+- **[terraform-specialist](terraform-specialist.md)** - Write advanced Terraform modules, manage state files, and implement IaC best practices
 - **[incident-responder](incident-responder.md)** - Handles production incidents with urgency and precision
+- **[network-engineer](network-engineer.md)** - Debug network connectivity, configure load balancers, and analyze traffic patterns
 - **[dx-optimizer](dx-optimizer.md)** - Developer Experience specialist that improves tooling, setup, and workflows
 
 ### Quality & Security
@@ -33,12 +40,14 @@ This repository contains 28 specialized subagents that extend Claude Code's capa
 - **[test-automator](test-automator.md)** - Create comprehensive test suites with unit, integration, and e2e tests
 - **[performance-engineer](performance-engineer.md)** - Profile applications, optimize bottlenecks, and implement caching strategies
 - **[debugger](debugger.md)** - Debugging specialist for errors, test failures, and unexpected behavior
+- **[error-detective](error-detective.md)** - Search logs and codebases for error patterns, stack traces, and anomalies
 
 ### Data & AI
 - **[data-scientist](data-scientist.md)** - Data analysis expert for SQL queries, BigQuery operations, and data insights
 - **[data-engineer](data-engineer.md)** - Build ETL pipelines, data warehouses, and streaming architectures
 - **[ai-engineer](ai-engineer.md)** - Build LLM applications, RAG systems, and prompt pipelines
 - **[ml-engineer](ml-engineer.md)** - Implement ML pipelines, model serving, and feature engineering
+- **[mlops-engineer](mlops-engineer.md)** - Build ML pipelines, experiment tracking, and model registries
 - **[prompt-engineer](prompt-engineer.md)** - Optimizes prompts for LLMs and AI systems
 
 ### Specialized Domains
@@ -85,13 +94,19 @@ Mention the subagent by name in your request:
 # Infrastructure and operations
 "Have devops-troubleshooter analyze these production logs"
 "Use cloud-architect to design a scalable AWS architecture"
+"Get network-engineer to debug SSL certificate issues"
+"Use database-admin to set up backup and replication"
 
 # Data and AI
 "Get data-scientist to analyze this customer behavior dataset"
 "Use ai-engineer to build a RAG system for document search"
+"Have mlops-engineer set up MLflow experiment tracking"
 ```
 
 ### Multi-Agent Workflows
+
+These subagents work together seamlessly, and for more complex orchestrations, you can use the **[Claude Code Commands](https://github.com/wshobson/commands)** collection which provides 52 pre-built slash commands that leverage these subagents in sophisticated workflows.
+
 ```bash
 # Feature development workflow
 "Implement user authentication feature"
@@ -103,7 +118,37 @@ Mention the subagent by name in your request:
 
 # Production incident workflow
 "Debug high memory usage in production"
-# Automatically uses: incident-responder → devops-troubleshooter → performance-engineer
+# Automatically uses: incident-responder → devops-troubleshooter → error-detective → performance-engineer
+
+# Network connectivity workflow
+"Fix intermittent API timeouts"
+# Automatically uses: network-engineer → devops-troubleshooter → performance-engineer
+
+# Database maintenance workflow
+"Set up disaster recovery for production database"
+# Automatically uses: database-admin → database-optimizer → incident-responder
+
+# ML pipeline workflow
+"Build end-to-end ML pipeline with monitoring"
+# Automatically uses: mlops-engineer → ml-engineer → data-engineer → performance-engineer
+```
+
+### Advanced Workflows with Slash Commands
+
+For more sophisticated multi-subagent orchestration, use the companion [Commands repository](https://github.com/wshobson/commands):
+
+```bash
+# Complex feature development (8+ subagents)
+/full-stack-feature Build user dashboard with real-time analytics
+
+# Production incident response (5+ subagents) 
+/incident-response Database connection pool exhausted
+
+# ML infrastructure setup (6+ subagents)
+/ml-pipeline Create recommendation engine with A/B testing
+
+# Security-focused implementation (7+ subagents)
+/security-hardening Implement OAuth2 with zero-trust architecture
 ```
 
 ## Subagent Format
@@ -165,22 +210,31 @@ payment-integration → security-auditor → Validated implementation
 ### 🔧 Implementation & Development  
 - **python-pro**: Python-specific development tasks
 - **golang-pro**: Go-specific development tasks
+- **rust-pro**: Rust-specific development, memory safety, systems programming
+- **c-pro**: C programming, embedded systems, performance-critical code
+- **javascript-pro**: Modern JavaScript, async patterns, Node.js/browser code
+- **sql-pro**: Database queries, schema design, query optimization
 - **mobile-developer**: React Native/Flutter development
 
 ### 🛠️ Operations & Maintenance
 - **devops-troubleshooter**: Production issues, deployment problems
 - **incident-responder**: Critical outages requiring immediate response
 - **database-optimizer**: Query performance, indexing strategies
+- **database-admin**: Backup strategies, replication, user management, disaster recovery
+- **terraform-specialist**: Infrastructure as Code, Terraform modules, state management
+- **network-engineer**: Network connectivity, load balancers, SSL/TLS, DNS debugging
 
 ### 📊 Analysis & Optimization
 - **performance-engineer**: Application bottlenecks, optimization
 - **security-auditor**: Vulnerability scanning, compliance checks
 - **data-scientist**: Data analysis, insights, reporting
+- **mlops-engineer**: ML infrastructure, experiment tracking, model registries, pipeline automation
 
 ### 🧪 Quality Assurance
 - **code-reviewer**: Code quality, maintainability review
 - **test-automator**: Test strategy, test suite creation
 - **debugger**: Bug investigation, error resolution
+- **error-detective**: Log analysis, error pattern recognition, root cause analysis
 
 ## Best Practices
 
