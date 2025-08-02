@@ -4,7 +4,7 @@ A comprehensive collection of specialized AI subagents for [Claude Code](https:/
 
 ## Overview
 
-This repository contains 48 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
+This repository contains 50 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
 
 ## Available Subagents
 
@@ -23,7 +23,9 @@ This repository contains 48 specialized subagents that extend Claude Code's capa
 - **[c-pro](c-pro.md)** - Write efficient C code with proper memory management and system calls
 - **[cpp-pro](cpp-pro.md)** - Write idiomatic C++ code with modern features, RAII, smart pointers, and STL algorithms
 - **[javascript-pro](javascript-pro.md)** - Master modern JavaScript with ES6+, async patterns, and Node.js APIs
+- **[typescript-pro](typescript-pro.md)** - Master TypeScript with advanced types, generics, and strict type safety
 - **[php-pro](php-pro.md)** - Write idiomatic PHP code with modern features and performance optimizations
+- **[java-pro](java-pro.md)** - Master modern Java with streams, concurrency, and JVM optimization
 - **[ios-developer](ios-developer.md)** - Develop native iOS applications with Swift/SwiftUI
 - **[sql-pro](sql-pro.md)** - Write complex SQL queries, optimize execution plans, and design normalized schemas
 
@@ -39,7 +41,7 @@ This repository contains 48 specialized subagents that extend Claude Code's capa
 - **[dx-optimizer](dx-optimizer.md)** - Developer Experience specialist that improves tooling, setup, and workflows
 
 ### Quality & Security
-- **[code-reviewer](code-reviewer.md)** - Expert code review for quality, security, and maintainability
+- **[code-reviewer](code-reviewer.md)** - Expert code review with deep configuration security focus and production reliability
 - **[security-auditor](security-auditor.md)** - Review code for vulnerabilities and ensure OWASP compliance
 - **[test-automator](test-automator.md)** - Create comprehensive test suites with unit, integration, and e2e tests
 - **[performance-engineer](performance-engineer.md)** - Profile applications, optimize bottlenecks, and implement caching strategies
@@ -72,7 +74,7 @@ This repository contains 48 specialized subagents that extend Claude Code's capa
 
 ## Model Assignments
 
-All 48 subagents are configured with specific Claude models based on task complexity:
+All 50 subagents are configured with specific Claude models based on task complexity:
 
 ### 🚀 Haiku (Fast & Cost-Effective) - 8 agents
 **Model:** `haiku`
@@ -85,17 +87,19 @@ All 48 subagents are configured with specific Claude models based on task comple
 - `search-specialist` - Web research and information gathering
 - `legal-advisor` - Privacy policies and compliance documents
 
-### ⚡ Sonnet (Balanced Performance) - 29 agents
+### ⚡ Sonnet (Balanced Performance) - 31 agents
 **Model:** `sonnet`
 
 **Development & Languages:**
 - `python-pro` - Python development with advanced features
 - `javascript-pro` - Modern JavaScript and Node.js
+- `typescript-pro` - Advanced TypeScript with type systems
 - `golang-pro` - Go concurrency and idiomatic patterns
 - `rust-pro` - Rust memory safety and systems programming
 - `c-pro` - C programming and embedded systems
 - `cpp-pro` - Modern C++ with STL and templates
 - `php-pro` - Modern PHP with advanced features
+- `java-pro` - Modern Java with streams and concurrency
 - `ios-developer` - Native iOS development with Swift/SwiftUI
 - `frontend-developer` - React components and UI
 - `ui-ux-designer` - Interface design and wireframes
@@ -165,6 +169,7 @@ Mention the subagent by name in your request:
 ```bash
 # Code quality and review
 "Use code-reviewer to analyze this component for best practices"
+"Have code-reviewer scrutinize these configuration changes"
 "Have security-auditor check for OWASP compliance issues"
 
 # Development tasks  
@@ -320,6 +325,8 @@ payment-integration → security-auditor → Validated implementation
 - **rust-pro**: Rust-specific development, memory safety, systems programming
 - **c-pro**: C programming, embedded systems, performance-critical code
 - **javascript-pro**: Modern JavaScript, async patterns, Node.js/browser code
+- **typescript-pro**: Advanced TypeScript, generics, type inference, enterprise patterns
+- **java-pro**: Modern Java development, streams, concurrency, Spring Boot
 - **ios-developer**: Native iOS development with Swift/SwiftUI
 - **sql-pro**: Database queries, schema design, query optimization
 - **mobile-developer**: React Native/Flutter development
@@ -339,7 +346,7 @@ payment-integration → security-auditor → Validated implementation
 - **mlops-engineer**: ML infrastructure, experiment tracking, model registries, pipeline automation
 
 ### 🧪 Quality Assurance
-- **code-reviewer**: Code quality, maintainability review
+- **code-reviewer**: Code quality, configuration security, production reliability
 - **test-automator**: Test strategy, test suite creation
 - **debugger**: Bug investigation, error resolution
 - **error-detective**: Log analysis, error pattern recognition, root cause analysis
