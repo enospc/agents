@@ -1,10 +1,41 @@
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="center">
+        <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=en">English</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=zh-CN">简体中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=zh-TW">繁體中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=ja">日本語</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=ko">한국어</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=hi">हिन्दी</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=th">ไทย</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=fr">Français</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=de">Deutsch</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=es">Español</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=it">Italiano</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=ru">Русский</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=pt">Português</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=nl">Nederlands</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=pl">Polski</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=ar">العربية</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=fa">فارسی</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=tr">Türkçe</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=vi">Tiếng Việt</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=id">Bahasa Indonesia</a>
+        | <a href="https://openaitx.github.io/view.html?user=wshobson&project=agents&lang=as">অসমীয়া</
+      </div>
+    </div>
+  </details>
+</div>
+
 # Claude Code Subagents Collection
 
 A comprehensive collection of specialized AI subagents for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), designed to enhance development workflows with domain-specific expertise.
 
 ## Overview
 
-This repository contains 56 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
+This repository contains 58 specialized subagents that extend Claude Code's capabilities. Each subagent is an expert in a specific domain, automatically invoked based on context or explicitly called when needed. All agents are configured with specific Claude models based on task complexity for optimal performance and cost-effectiveness.
 
 ## Available Subagents
 
@@ -28,7 +59,9 @@ This repository contains 56 specialized subagents that extend Claude Code's capa
 - **[java-pro](java-pro.md)** - Master modern Java with streams, concurrency, and JVM optimization
 - **[elixir-pro](elixir-pro.md)** - Write idiomatic Elixir code with OTP patterns, functional programming, and Phoenix frameworks
 - **[csharp-pro](csharp-pro.md)** - Write modern C# code with advanced features and .NET optimization
+- **[scala-pro](scala-pro.md)** - Master enterprise-grade Scala development with functional programming, distributed systems, and big data processing
 - **[unity-developer](unity-developer.md)** - Build Unity games with optimized scripts and performance tuning
+- **[minecraft-bukkit-pro](minecraft-bukkit-pro.md)** - Master Minecraft server plugin development with Bukkit, Spigot, and Paper APIs
 - **[ios-developer](ios-developer.md)** - Develop native iOS applications with Swift/SwiftUI
 - **[sql-pro](sql-pro.md)** - Write complex SQL queries, optimize execution plans, and design normalized schemas
 
@@ -70,6 +103,7 @@ This repository contains 56 specialized subagents that extend Claude Code's capa
 
 ### Documentation
 - **[docs-architect](docs-architect.md)** - Creates comprehensive technical documentation from existing codebases
+- **[mermaid-expert](mermaid-expert.md)** - Create Mermaid diagrams for flowcharts, sequences, ERDs, and architectures
 - **[reference-builder](reference-builder.md)** - Creates exhaustive technical references and API documentation
 - **[tutorial-engineer](tutorial-engineer.md)** - Creates step-by-step tutorials and educational content from code
 
@@ -82,7 +116,7 @@ This repository contains 56 specialized subagents that extend Claude Code's capa
 
 ## Model Assignments
 
-All 56 subagents are configured with specific Claude models based on task complexity:
+All 58 subagents are configured with specific Claude models based on task complexity:
 
 ### 🚀 Haiku (Fast & Cost-Effective) - 9 agents
 **Model:** `haiku`
@@ -96,7 +130,7 @@ All 56 subagents are configured with specific Claude models based on task comple
 - `search-specialist` - Web research and information gathering
 - `legal-advisor` - Privacy policies and compliance documents
 
-### ⚡ Sonnet (Balanced Performance) - 34 agents
+### ⚡ Sonnet (Balanced Performance) - 36 agents
 **Model:** `sonnet`
 
 **Development & Languages:**
@@ -111,7 +145,9 @@ All 56 subagents are configured with specific Claude models based on task comple
 - `java-pro` - Modern Java with streams and concurrency
 - `elixir-pro` - Elixir with OTP patterns and Phoenix
 - `csharp-pro` - Modern C# with .NET frameworks and patterns
+- `scala-pro` - Enterprise Scala with Apache Pekko, Akka, Spark, and ZIO/Cats Effect
 - `unity-developer` - Unity game development and optimization
+- `minecraft-bukkit-pro` - Minecraft plugin development with Bukkit/Spigot/Paper
 - `ios-developer` - Native iOS development with Swift/SwiftUI
 - `frontend-developer` - React components and UI
 - `ui-ux-designer` - Interface design and wireframes
@@ -138,6 +174,7 @@ All 56 subagents are configured with specific Claude models based on task comple
 - `ml-engineer` - ML model deployment
 - `legacy-modernizer` - Framework migrations
 - `payment-integration` - Payment processing
+- `mermaid-expert` - Mermaid diagrams and visual documentation
 
 ### 🧠 Opus (Maximum Capability) - 13 agents
 **Model:** `opus`
@@ -343,7 +380,9 @@ payment-integration → security-auditor → Validated implementation
 - **java-pro**: Modern Java development, streams, concurrency, Spring Boot
 - **elixir-pro**: Elixir development, OTP patterns, Phoenix frameworks, functional programming
 - **csharp-pro**: Modern C# development, .NET frameworks, enterprise patterns
+- **scala-pro**: Enterprise Scala with functional programming, Apache Pekko/Akka actors, Apache Spark, ZIO/Cats Effect, reactive architectures
 - **unity-developer**: Unity game development, C# scripting, performance optimization
+- **minecraft-bukkit-pro**: Minecraft plugin development, event systems, server-side features
 - **ios-developer**: Native iOS development with Swift/SwiftUI
 - **sql-pro**: Database queries, schema design, query optimization
 - **mobile-developer**: React Native/Flutter development
